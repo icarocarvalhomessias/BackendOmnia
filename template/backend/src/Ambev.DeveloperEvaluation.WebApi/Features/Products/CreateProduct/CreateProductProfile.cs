@@ -8,7 +8,8 @@ public class CreateProductProfile : Profile
     public CreateProductProfile()
     {
         CreateMap<CreateProductRequest, CreateProductCommand>();
-        CreateMap<CreateProductResult, CreateProductResponse>();
+        CreateMap<CreateProductResult, CreateProductResponse>()
+            .ForMember(dest => dest.Rating, opt => opt.MapFrom(src => new CreateProductResponse.RatingCreate { Rate = src.Rate, Count = src.Count }));
     }
 
 }

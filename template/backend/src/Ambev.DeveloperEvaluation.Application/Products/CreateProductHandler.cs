@@ -43,6 +43,7 @@ public class CreateProductHandler : IRequestHandler<CreateProductCommand, Create
 
         var rating = new Rating
         {
+            Id = Guid.NewGuid(),
             Rate = command.Rating,
             Count = command.Count
         };
