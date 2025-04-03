@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Ambev.DeveloperEvaluation.Application.Products;
+namespace Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
 
 /// <summary>
 /// Validator for CreateProductCommand that defines validation rules for product creation command.
