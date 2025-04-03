@@ -4,7 +4,7 @@ using AutoMapper;
 using FluentValidation;
 using MediatR;
 
-namespace Ambev.DeveloperEvaluation.Application.Products;
+namespace Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
 
 /// <summary>
 /// Handler for processing CreateProductCommand requests

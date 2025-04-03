@@ -1,6 +1,8 @@
-﻿using Ambev.DeveloperEvaluation.Application.Products;
+﻿using Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
+using Ambev.DeveloperEvaluation.Application.Products.GetProducts;
 using Ambev.DeveloperEvaluation.WebApi.Common;
 using Ambev.DeveloperEvaluation.WebApi.Features.Products.CreateProduct;
+using Ambev.DeveloperEvaluation.WebApi.Features.Products.GetProducts;
 using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +20,24 @@ public class ProductController : ControllerBase
     {
         _mediator = mediator;
         _mapper = mapper;
+    }
+
+    [HttpGet]
+    [ProducesResponseType(typeof(ApiResponseWithData<GetProductsResult>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> GetProducts([FromQuery] GetProductsRequest getProductsRequest)
+    {
+        var request = new GetProductsQuery(getProductsRequest.Page, getProductsRequest.PageSize, getProductsRequest.OrderBy);
+        var products = await _mediator.Send(request);
+
+        var response = new ApiResponseWithData<GetProductsResult>
+        {
+            Success = true,
+            Message = "Products retrieved successfully",
+            Data = products
+        };
+
+        return Ok(response);
     }
 
     [HttpPost]

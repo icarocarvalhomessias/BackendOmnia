@@ -1,4 +1,4 @@
-﻿namespace Ambev.DeveloperEvaluation.Application.Products;
+﻿namespace Ambev.DeveloperEvaluation.Application.Products.CreateProduct;
 
 /// <summary>
 /// API response model for CreateProduct operation
