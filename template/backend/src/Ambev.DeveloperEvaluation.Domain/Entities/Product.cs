@@ -69,6 +69,7 @@ public class Product : BaseEntity
     public Product()
     {
         CreatedAt = DateTime.Now;
+        Activate();
     }
 
     /// <summary>
