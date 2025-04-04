@@ -1,6 +1,26 @@
 # Developer Evaluation Project
 
-`READ CAREFULLY`
+This project is a backend API for managing sales records, built as part of a developer evaluation. The API implements CRUD operations and adheres to specific business rules for discounts and item limits. The project is structured using Domain-Driven Design (DDD) principles and includes optional event logging for key actions.
+
+---
+
+## Getting Started
+
+This guide provides detailed instructions on how to set up, run, and test the application.
+
+### Prerequisites
+
+Ensure you have the following installed on your system:
+
+- **.NET SDK** (version 6.0 or later)  
+  [Download .NET SDK](https://dotnet.microsoft.com/download)
+- **SQL Server** (or any compatible database)
+- **Git** (for cloning the repository)  
+  [Download Git](https://git-scm.com/)
+- **Postman** (optional, for testing the API)  
+  [Download Postman](https://www.postman.com/)
+
+---
 
 ## Instructions
 **The test below will have up to 7 calendar days to be delivered from the date of receipt of this manual.**
@@ -54,6 +74,21 @@ These business rules define quantity-based discounting tiers and limitations:
 2. Restrictions:
    - Maximum limit: 20 items per product
    - No discounts allowed for quantities below 4 items
+
+---
+
+## Project Setup
+
+Follow these steps to set up the project on your local machine:
+
+1. **Clone the Repository**  
+   Open a terminal and run:
+   ```bash
+   git clone https://github.com/your-username/DeveloperEvaluationProject.git
+   cd DeveloperEvaluationProject
+   ```
+
+---
 
 ## Overview
 This section provides a high-level overview of the project and the various skills and competencies it aims to assess for developer candidates. 
