@@ -247,4 +247,5 @@ public class Sale : BaseEntity
             Errors = result.Errors.Select(o => (ValidationErrorDetail)o)
         };
     }
+
 }

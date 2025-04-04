@@ -12,5 +12,6 @@ public class ApplicationModuleInitializer : IModuleInitializer
     {
         builder.Services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
         builder.Services.AddScoped<IProductRepository, ProductRepository>();
+        builder.Services.AddScoped<ISaleRepository, SaleRepository>();
     }
 }
