@@ -60,4 +60,16 @@ public class SaleTests
         discount.Should().Be(expectedDiscount);
     }
 
+    [Fact(DisplayName = "Add item to sale")]
+    public void Sale_WhenAddItem_ShouldAddItemToSale()
+    {
+        // Arrange
+        var sale = SaleTestData.GenerateValidSale(2);
+        var saleItem = SaleTestData.GenerateValidSale(2).Items.First();
+        // Act
+        sale.AddItem(saleItem);
+        // Assert
+        sale.Items.Should().Contain(saleItem);
+    }
+
 }
